@@ -114,16 +114,19 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer countVowels(String str) {
         // Initialize the result Integer
+        Integer count = 0;
+        
+        // Define Vowels 
+        Set<String> vowels = new Set<String>{'a','e','i','o','u'};
 
-        /*
-        for () {
-            // get individual characters from the string - hint use substring or split
-            // check if the character is a vowel
-            // if it is a vowel, increment the result Integer
+        for (Integer i = 0; i <str.length(); i++) {
+            String chs = str.substring(i, i+1); // get individual characters from the string - hint use substring or split
+            if (vowels.contains(chs)){ // check if the character is a vowel
+                count++; // if it is a vowel, increment the result Integer
         }
-        */
+    }    
 
-        return null; // Replace null with the variable you used to store the result
+        return count; // Replace null with the variable you used to store the result
     }
 
     /**
