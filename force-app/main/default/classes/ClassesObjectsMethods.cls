@@ -378,14 +378,18 @@ public with sharing class ClassesObjectsMethods {
         List<String> results = new List<String>();
         // Create a new instance of Person class
         // Name the person 'John Doe' and set the age to 28
-
-        // Add the details of the person using the introduceYourself method
-
-        // Get the name of the person using the getter method and add it to the list
-
-        // Get the age of the person using the getter method and add it to the list
+        Person person = new person('John Doe', 28 );
         
-        return null; // Replace null with the variable you used to store the result
+        // Add the details of the person using the introduceYourself method
+        results.add(person.introduceYourself());
+        
+        // Get the name of the person using the getter method and add it to the list
+        results.add(person.getName());
+        
+        // Get the age of the person using the getter method and add it to the list
+        results.add(String.valueOf(person.getAge()));
+
+        return results; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -397,9 +401,9 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Person createPerson(String name, Integer age) {
         // Create a new instance of the Person class using the provided name and age
-        
+        Person newperson = new person(name, age);
         // Return the new instance of the Person class
-        return null; // Replace null with the variable you used to store the result
+        return newperson; // Replace null with the variable you used to store the result
     }
 
     /**
